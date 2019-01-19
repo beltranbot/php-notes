@@ -1,10 +1,7 @@
 <?php
 
-// function names are case insensitive
+$b = true;
 
-function sayHello() {
-    echo "hello";
-    echo "\n";
-}
+$b ? print "TRUE" : print "FALSE";
 
-sayhello();
+echo "\n";

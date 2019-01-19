@@ -1,14 +1,16 @@
 <?php
+// variables scopes
 
-$names = fix_names("WILLIAM", "henry", "gatES");
-echo $names[0] . " " . $names[1] . " " . $names[2];
+$temp = "The date is ";
 
-function fix_names($n1, $n2, $n3) {
-    $n1 = ucfirst(strtolower($n1));
-    $n2 = ucfirst(strtolower($n2));
-    $n3 = ucfirst(strtolower($n3));
+echo longdate(time());
 
-    return [$n1, $n2, $n3];
+function longdate($timestamp) {
+    $date = date('l F jS Y', $timestamp);
+
+    return $temp . $date;
 }
 
 echo "\n";
+
+// this code does not compile since the $temp variable within longdate is never defined
